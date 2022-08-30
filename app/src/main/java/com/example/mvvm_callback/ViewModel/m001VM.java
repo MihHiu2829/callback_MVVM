@@ -14,12 +14,12 @@ public class m001VM extends ViewModel {
     }
 
     public void startCountDown() {
-        if(!th.isAlive() || th == null)
+        if( th == null || !th.isAlive())
         {
             th = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    for(int i=10;i<=0;i--)
+                    for(int i=10;i >= 0;i--)
                     {
                         try {
                             Thread.sleep(1000);
